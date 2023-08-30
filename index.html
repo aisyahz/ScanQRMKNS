@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootsrap Stylesheet CDN -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css" />
+  <title>Ticket Booking | Al Nahian</title>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #e9ffec;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    /* Style for QR Code Scanner Section */
+    #qr-scanner-container {
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Style for Input Fields Container */
+    #input-fields-container {
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="text-center mt-4 mb-5">Ticket Booking</h2>
+    
+    <!-- QR Code Scanner Section -->
+    <div id="qr-scanner-container" class="text-center">
+      <h3>Scan QR Code</h3>
+      <button id="start-scan-btn" class="btn btn-primary">Start Scanning</button>
+      <div id="qr-reader"></div>
+    </div>
+    
+    <!-- Input Fields Container (Hidden by default) -->
+    <div id="input-fields-container" style="display: none;">
+      <input type="text" id="name" placeholder="Name">
+      <input type="text" id="nombor" placeholder="Phone Number">
+      <input type="text" id="email" placeholder="Email">
+    </div>
+
+    <!-- Passenger List With Table Content -->
+    <div class="container">
+      <h2 class="text-center mt-5">Passenger List</h2>
+
+      <table class="table table-striped table-hover mt-5 text-center table-responsive-md table-responsive-sm">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody id="passenger-list"></tbody>
+      </table>
+    </div>
+
+    <!-- Credit Section -->
+    <footer class="credit text-center mt-5">
+      <p>
+        Made With <span style="color: red;">♥</span> By
+        <a style="text-decoration: none; font-weight: bold; color: black;" target="_blank"
+          href="https://facebook.com/alnahian2003">Al Nahian</a>
+      </p>
+
+      <p>
+        Special Thanks To
+        <a style="text-decoration: none; font-weight: bold; color: #f58220;" target="_blank"
+          href="https://www.youtube.com/channel/UCC-aIlmCJvIERahr2spCEDg">JS Bangladesh</a>
+      </p>
+
+      <p>
+        Powered By
+        <a style="
+              text-decoration: none;
+              font-weight: bold;
+              color: rgb(0, 167, 42);
+            " target="_blank" href="https://hostweb.net">Host Web</a>
+      </p>
+    </footer>
+  </div>
+
+  <!-- JS Link -->
+  <script src="https://unpkg.com/html5-qrcode@2.0.5/dist/html5-qrcode.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
